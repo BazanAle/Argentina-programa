@@ -1,0 +1,46 @@
+body{
+    margin: 10px;
+    margin-top: 0px;
+}
+
+.header{
+    border-radius: 30px 30px 30px 30px;
+}
+.img-fondo{
+    height: 400px;
+    width: 100%;
+    border-radius: 30px 30px 0px 0px;
+    
+}
+.avatar{
+    height: 100px;
+    width: 100px;
+    
+}
+.datos-personales{
+    position: relative;
+    bottom: 57px;
+}
+
+.card{
+    border: 0,5px solid grey;
+    margin: 15px 0px;
+    border-radius: 30px;
+    padding: 10px 10px 5px 15px;
+}
+
+.institucion{
+height: 100px;
+width: 100px;
+}
+
+.img-logo{
+    height: 100px;
+    width: 100px;
+}
+.info-estudios{
+    padding: 3px 3px 3px 10px;
+}
+.skills{
+    width: 700px;
+}

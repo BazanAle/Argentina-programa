@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=" d-flex justify-content-between mb-1 bg-secondary text-white">
+        <p class="m-0 ml-1 pt-2">Manuel Sadosky</p>
+        <div class="social_media">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"> <i class="fab fa-twitter"></i></a>
+            <button type="button" class="btn btn-outline-success p-1 m-1">Login</button>
+        </div>
+    </div>  
+
+
+    <div class="container">
+        <div class="header border" style="height:650px;">
+            <img class="img-fondo" src="https://images.unsplash.com/photo-1622020457014-aed1cc44f25e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3572&q=80" alt="Imagen fondo">
+            <div class="datos-personales">
+                <div class="d-flex p-2">
+                    <img class="rounded-circle avatar" src="https://images.unsplash.com/photo-1537314258490-7f581ad90fd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2376&q=80" alt="">
+                    <i class="fas fa-pen align-self-end pb-3 "></i>
+        
+                </div>
+            
+                <div class="p-1 d-flex justify-content-between">
+                    <div>
+                        <h2>Manuel Sadosky</h2>
+                        <p>Informatico en Conicet</p>
+                        <p>Buenos Aires(Argentina) <a href="#">Informacion de contacto</a> </p>
+                        <div class="d-flex">
+                            <button type="button"class="btn btn-primary">Tengo interes en</button>
+                            <button type="button" class="btn btn-light ml-2">Añadir Seccion</button>
+                            <button type="button" class="btn btn-light ml-2">Mas</button>
+                        </div>
+                    </div>    
+                    <div>
+                        <div class="d-flex">
+                            <img style="height:20px; width:20px;" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Logo_CONICET.jpeg" alt="logo conicet">
+                            <p>CONICET</p>                       
+                    </div>
+                        <div class="d-flex">
+                            <img style="height:20px; width:20px;" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Logo_de_la_Universidad_de_Buenos_Aires.jpg" alt="Logo universidad">
+                            <p>Universidad de Buenos Aires</p>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+
+        <!--Acerca de-->
+        <div class="card ">
+            <div class="d-flex justify-content-between">
+                <h2>Acerda de</h2>
+                <div class="btn-edit" onclick="cambiar_parrafo()">
+                    <a href="#">
+                    <i class="fas fa-pen align-self-end pb-3 "></i>    
+                    </a>    
+                </div>    
+            </div>
+            <div>
+                <p id="text-acercade">Matematico fisico e informatico argentino considerado como el padre de la computadora argentina</p>
+            </div>
+            <div>
+                <input type="text" id="edit-acercade" oninput="myFunction2(this.value)" style="display:none;">
+            </div>    
+        </div>
+
+
+
+
+        <!--Experiencia y Educacion-->
+        <div class="card">
+            <div class="experiencia d-flex justify-content-between">
+                <h2>Experiencia</h2>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img class="institucion" src="https://images.unsplash.com/photo-1595426512134-28b0ffe4b340?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="Logo" class="img-logo">
+                    <div class="pl-2">
+                        <h4>Backend Developer</h4>
+                        <p>Pixar Jornada parcial</p>
+                        <p>   mar 2019-actualidad-2 años y 6 meses</p>
+                        <p>Guadalajara y alrededores, Mexico</p>
+                    </div>
+                </div>    
+                <div>
+                    <i class="fas fa-pen align-self-end pb-3 "></i>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <h2>Educacion</h2>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img src="https://www.pilaradiario.com/u/fotografias/fotosnoticias/2019/3/12/77162.jpg" alt="Logo" class="img-logo">
+                    <div class="info-estudios">
+                        <h4>UTN</h4>
+                        <p>Ingenieria en Sistemas</p>
+                        <p> 2019-2022</p>
+                        
+                    </div>
+                </div>    
+                <div>
+                    <i class="fas fa-pen align-self-end pb-3 "></i>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/CETI_Logo.png" alt="Logo" class="img-logo">
+                    <div class="info-estudios">
+                        <h4>Centro de Enseñanza tecnica industrial</h4>
+                        <p>Tecnologo desarrollador de software</p>
+                        <p> 2014-2018</p>
+                        
+                    </div>
+                </div>    
+                <div>
+                    <i class="fas fa-pen align-self-end pb-3 "></i>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img src="https://images.unsplash.com/photo-1614036056923-b707c5258c01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80" alt="Logo" class="img-logo">
+                    <div class="info-estudios">
+                        <h4>Escuela Secundaria Tecnica</h4>
+                        <p>Tecnico Electronica</p>
+                        <p> 2012-2014</p>
+                        
+                    </div>
+                </div>    
+                <div>
+                    <i class="fas fa-pen align-self-end pb-3 "></i>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Hard Skills y soft Skills-->
+        <div class="card">
+            <div class="d-flex justify-content-between">
+                <h2>Hard Skills Y soft Skills</h2>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div style="width: 800px; margin-left: 100px;" >
+
+                <div class="d-flex">
+                    <div class="skills">
+                        <p class="text-center m-0">Resolucion de problemas</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-pen align-self-end pb-3 "></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="d-flex pt-2">
+                    <div class="skills">
+                        <p class="text-center m-0">Diseño de Sistemas</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-pen align-self-end pb-3 "></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Proyectos-->
+        <div class="card">
+            <div class="experiencia d-flex justify-content-between">
+                <h2>Experiencia</h2>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="d-flex justify-content-between">
+                
+                    <div>
+                        <h4 class="text-primary">e-Farmacia</h4>
+                        <p>Desarrollamos un sitio web de comercio electronico</p>
+                       
+                    </div>
+                   
+                    <div>
+                        <i class="fas fa-pen align-self-end pb-3 "></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                
+                <div>
+                    <h4 class="text-primary">Sistema de Monitoreo</h4>
+                    <p>Desarrollamos un Back end de API Rest</p>
+                   
+                </div>
+               
+                <div>
+                    <i class="fas fa-pen align-self-end pb-3 "></i>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+    function cambiar_parrafo(){
+        document.getElementById("edit-acercade").style.display="block"
+        let texto = document.getElementById("text-acercade").innerText
+        console.log(texto);
+    };
+    function myFunction2(valor){
+        document.getElementById("text-acercade").innerText=valor;
+    };
+</script>
+</html>

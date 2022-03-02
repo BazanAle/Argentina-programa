@@ -1,0 +1,74 @@
+{
+    "name":"Alejandro Bazan",
+    "backimage":"https://images.unsplash.com/photo-1622020457014-aed1cc44f25e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3572&q=80",
+    "image":"https://images.unsplash.com/photo-1537314258490-7f581ad90fd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2376&q=80",
+    "position":"Contador",
+    "company":{
+        "name":"MAYO HELADOS",
+        "img":"url",
+        "url":"#"
+    },
+    "school":{
+        "name":"Universidad Nacional de Cordoba",
+        "img":"logo",
+        "url":"#"
+    },
+    "ubication":"Cordoba(Argentina)",
+    "about":"Contador Publico",
+    "experience":[{
+        "position":"Comprador",
+        "company":"Coca Cola Andina",
+        "img":"url",
+        "mode":"Jornada Completa",
+        "start":"mar 2012",
+        "end":"sep 2018",
+        "Tiempo duracion":"5 años"
+
+    }],
+    "education":[{
+        "school": "UNC",
+        "title":"Contador Publico",
+        "img":"https://www.pilaradiario.com/u/fotografias/fotosnoticias/2019/3/12/77162.jpg",
+        "career":"Contador Publico",
+        "start":"2012",
+        "end": "2019"
+    },
+    {
+        "school": "Jovenes Argentinos",
+        "title":"Perito mercantil",
+        "img":"https://upload.wikimedia.org/wikipedia/commons/3/3c/CETI_Logo.png",
+        "career":"Perito mercantil",
+        "start":"2006",
+        "end": "2012"
+
+    },
+    {
+        "school": "Syria Polletti",
+        "title":"Primario",
+        "img":"https://images.unsplash.com/photo-1614036056923-b707c5258c01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80",
+        "career":"Primario",
+        "start":"2000",
+        "end": "2006"
+    }
+
+],
+"aptitudes":[{
+    "name":"Resolucion de problemas",
+    "progress":75,
+    "confirms":2,
+    "confirmsNames":[{
+        "name":"Moncho"
+        }]
+    
+    },
+    {
+    "name":"Trabajo en Equipo",
+    "progress":75,
+    "confirms":2,
+    "confirmsNames":[{
+        "name":"Moncho"
+        }]
+    }
+    ]
+
+}
