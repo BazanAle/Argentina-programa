@@ -1,8 +1,8 @@
 {
     "name":"Alejandro Bazan",
-    "backimage":"https://images.unsplash.com/photo-1622020457014-aed1cc44f25e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3572&q=80",
-    "image":"https://images.unsplash.com/photo-1537314258490-7f581ad90fd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2376&q=80",
-    "position":"Contador",
+    "backimage":"https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+    "image":"src/assets/images/perfil.jpg",
+    "position":"Contador y Programador FullStack",
     "company":{
         "name":"MAYO HELADOS",
         "img":"url",
