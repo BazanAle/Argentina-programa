@@ -2,12 +2,12 @@
     <img class="img-fondo" [src]="miPortfolio.backimage" alt="Imagen fondo">
     <div class="datos-personales">
         <div class="d-flex p-2">
-            <img class="rounded-circle avatar" [src]="miPortfolio.image" alt="">
+            <img class="rounded-circle avatar img-avatar ml-2 " [src]="miPortfolio.image" alt="" >
             <i class="fas fa-pen align-self-end pb-3 "></i>
 
         </div>
     
-        <div class="p-1 d-flex justify-content-between">
+        <div class="p-1 d-flex justify-content-between ml-3">
             <div>
                 <h2>{{miPortfolio.name}}</h2>
                 <p>{{miPortfolio.position}}</p>
@@ -18,14 +18,15 @@
                     <button type="button" class="btn btn-light ml-2">Mas</button>
                 </div>
             </div>    
-            <div>
+            <div class="mt-5 mr-3">
                 <div class="d-flex">
-                    <img style="height:20px; width:20px;" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Logo_CONICET.jpeg" alt="logo conicet">
-                    <p>CONICET</p>                       
-            </div>
+                    <img class="logo-encabezado" [src]="primeraExperiencia.img" alt="">
+                    
+                    <p class= "mt-2 mb-0">{{primeraExperiencia.company}}</p>                       
+                </div>
                 <div class="d-flex">
-                    <img style="height:20px; width:20px;" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Logo_de_la_Universidad_de_Buenos_Aires.jpg" alt="Logo universidad">
-                    <p>Universidad de Cordoba</p>
+                    <img class="logo-encabezado" [src]="primeraEducacion.img" alt="Logo universidad">
+                    <p class= "mt-2 mb-0" >{{primeraEducacion.school}}</p>
                 </div>    
             </div>
         </div>
