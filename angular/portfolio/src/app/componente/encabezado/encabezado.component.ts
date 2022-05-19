@@ -1,5 +1,7 @@
-import { ThrowStmt } from '@angular/compiler';
+
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/data/persona';
+
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -15,12 +17,19 @@ export class EncabezadoComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      console.log(data);
-      this.miPortfolio=data;
-      this.primeraExperiencia=data.experience[0];
-      this.primeraEducacion=data.education[0];
+    this.datosPortfolio.obtenerPersona().subscribe(data=>{
+     
+      this.miPortfolio=data[0];
+      console.log(this.miPortfolio);
     });
+    this.datosPortfolio.obtenerEducacion().subscribe(data=>{
+      this.primeraEducacion=data[0];
+      console.log(this.primeraEducacion)
+    });
+    this.datosPortfolio.obtenerExperiencia().subscribe(data=>{
+      this.primeraExperiencia=data[0];
+      console.log(this.primeraExperiencia)
+    })
   }
   
 }

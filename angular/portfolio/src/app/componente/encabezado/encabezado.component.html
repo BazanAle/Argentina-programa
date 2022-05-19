@@ -1,17 +1,19 @@
 <div class="header border" style="height:780px;">
-    <img class="img-fondo" [src]="miPortfolio.backimage" alt="Imagen fondo">
+    <img class="img-fondo" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="Imagen fondo">
     <div class="datos-personales">
         <div class="d-flex p-2">
-            <img class="rounded-circle avatar img-avatar ml-2 " [src]="miPortfolio.image" alt="" >
+            <img class="rounded-circle avatar img-avatar ml-2 " src="../../../assets/images/perfil.jpg" alt="" >
             <i class="fas fa-pen align-self-end pb-3 "></i>
 
         </div>
-    
+       
+   
         <div class="p-1 d-flex justify-content-between ml-3">
             <div>
-                <h2>{{miPortfolio.name}}</h2>
-                <p>{{miPortfolio.position}}</p>
-                <p>{{miPortfolio.ubication}} <a href="#">Informacion de contacto</a> </p>
+               <h2>{{miPortfolio.nombre}} {{miPortfolio.apellido}}</h2>
+                <p>{{miPortfolio.email}}</p>
+                <p>{{miPortfolio.domicilio}} <a href="#">Informacion de contacto</a> </p>
+              
                 <div class="d-flex">
                     <button type="button"class="btn btn-primary">Tengo interes en</button>
                     <button type="button" class="btn btn-light ml-2">Añadir Seccion</button>
@@ -19,17 +21,20 @@
                 </div>
             </div>    
             <div class="mt-5 mr-3">
+               
                 <div class="d-flex">
-                    <img class="logo-encabezado" [src]="primeraExperiencia.img" alt="">
+                    <img class="logo-encabezado" src="../../../assets/images/{{primeraExperiencia.url_logo}}" alt="">
                     
-                    <p class= "mt-2 mb-0">{{primeraExperiencia.company}}</p>                       
+                    <p class= "mt-2 mb-0">{{primeraExperiencia.nombre_empresa}}</p>                       
                 </div>
                 <div class="d-flex">
-                    <img class="logo-encabezado" [src]="primeraEducacion.img" alt="Logo universidad">
+                    <img class="logo-encabezado" src="../../../assets/images/{{primeraEducacion.img}}" alt="Logo universidad">
                     <p class= "mt-2 mb-0" >{{primeraEducacion.school}}</p>
-                </div>    
+                </div> 
+               
             </div>
         </div>
+        
     </div>
 </div>    
 

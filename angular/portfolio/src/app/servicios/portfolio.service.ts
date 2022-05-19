@@ -9,8 +9,15 @@ export class PortfolioService {
 
   constructor(private http:HttpClient) { }
 
-  obtenerDatos():Observable<any>{
-    return this.http.get('./assets/data/data.json');
+  obtenerEducacion():Observable<any>{
+    return this.http.get('http://localhost:8080/educacion');
   }
+  obtenerPersona():Observable<any>{
+    return this.http.get('http://localhost:8080/persona');
+  }
+  obtenerExperiencia():Observable<any>{
+    return this.http.get('http://localhost:8080/experiencia');
+  }
+ 
 }
 

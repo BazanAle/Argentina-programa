@@ -6,12 +6,18 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  url="";
+  url="localhost:8080/educacion";
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http:HttpClient) { 
+
     console.log("El servicio de autenticacion esta corriendo");
     this.currentUserSubject= new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'));
+  }
+  obtenerLos():Observable<any>{
+    console.log(this.http.get('url'));
+    return (this.http.get('url'));
+    
   }
 
   IniciarSesion(credenciales:any):Observable<any>
