@@ -2,13 +2,13 @@
     <div class="d-flex justify-content-between">
         <h2>Acerca de</h2>
         <div class="btn-edit" onclick="cambiar_parrafo()">
-            <a href="#">
+            <a>
             <i class="fas fa-pen align-self-end pb-3 "></i>    
             </a>    
         </div>    
     </div>
     <div>
-        <p id="text-acercade">Recibido de Contador Publico, emprendedor (Poseo mi propio emprendimiento) y enfocandome en el mundo de la programacion</p>
+        <p id="text-acercade">{{infoPortfolio.sobre_mi}}</p>
     </div>
     <div>
         <input type="text" id="edit-acercade" oninput="myFunction2(this.value)" style="display:none;">

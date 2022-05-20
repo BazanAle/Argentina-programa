@@ -1,4 +1,5 @@
 export interface Educacion {
+   
     school: string;
     title: string,
     score: number,

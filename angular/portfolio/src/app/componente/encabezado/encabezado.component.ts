@@ -23,11 +23,11 @@ export class EncabezadoComponent implements OnInit {
       console.log(this.miPortfolio);
     });
     this.datosPortfolio.obtenerEducacion().subscribe(data=>{
-      this.primeraEducacion=data[0];
+      this.primeraEducacion=data.reverse()[0];
       console.log(this.primeraEducacion)
     });
     this.datosPortfolio.obtenerExperiencia().subscribe(data=>{
-      this.primeraExperiencia=data[0];
+      this.primeraExperiencia=data.reverse()[0];
       console.log(this.primeraExperiencia)
     })
   }

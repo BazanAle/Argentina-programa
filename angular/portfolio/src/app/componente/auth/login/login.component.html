@@ -1,4 +1,5 @@
 
+<!--
 <div class="m-5">
     <h1>Iniciar Sesion</h1>
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
@@ -33,8 +34,9 @@
         <button [disabled]="form.invalid" type="submit" class="btn btn-primary" routerLink="/home">Submit</button>
   </form>
 </div>
+-->
 
-<!--<div class="container mt-3">
+<div class="container mt-3">
     <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
         <div class="row mb-3">
             <label for="email" class="col-sm-2 col-form-label">Email</label>
@@ -57,8 +59,8 @@
         </div>
 
         <div *ngIf="loginError" class="text-danger">Las credenciales ingresadas no existen en nuestros registros.</div>
-        <button [disabled]="form.invalid" type="submit" class="btn btn-primary me-3">Iniciar sesión</button>
+        <button [disabled]="form.invalid" type="submit" class="btn btn-primary m-3">Iniciar sesión</button>
         <button routerLink="/home" class="btn btn-primary">Cancelar</button>
     </form>
 </div>
--->
+

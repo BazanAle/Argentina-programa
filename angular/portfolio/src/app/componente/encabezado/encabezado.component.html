@@ -10,9 +10,11 @@
    
         <div class="p-1 d-flex justify-content-between ml-3">
             <div>
-               <h2>{{miPortfolio.nombre}} {{miPortfolio.apellido}}</h2>
-                <p>{{miPortfolio.email}}</p>
-                <p>{{miPortfolio.domicilio}} <a href="#">Informacion de contacto</a> </p>
+               <h2 class="m-0">{{miPortfolio.nombre}}, {{miPortfolio.apellido}}</h2>
+               <h6>{{primeraEducacion.title}} </h6>
+               <h6>{{primeraExperiencia.puesto}} {{primeraExperiencia.nombre_empresa}}</h6>
+               <p class="mb-1">{{miPortfolio.email}}</p>
+                <p>{{miPortfolio.domicilio}} <p>Informacion de contacto </p>
               
                 <div class="d-flex">
                     <button type="button"class="btn btn-primary">Tengo interes en</button>
@@ -23,7 +25,7 @@
             <div class="mt-5 mr-3">
                
                 <div class="d-flex">
-                    <img class="logo-encabezado" src="../../../assets/images/{{primeraExperiencia.url_logo}}" alt="">
+                    <img class="logo-encabezado" src="../../../assets/images/{{primeraExperiencia.url_logo}}" alt="Logo experiencia">
                     
                     <p class= "mt-2 mb-0">{{primeraExperiencia.nombre_empresa}}</p>                       
                 </div>
@@ -32,6 +34,7 @@
                     <p class= "mt-2 mb-0" >{{primeraEducacion.school}}</p>
                 </div> 
                
+                
             </div>
         </div>
         

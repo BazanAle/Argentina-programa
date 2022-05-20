@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acerda-de.component.css']
 })
 export class AcerdaDeComponent implements OnInit {
-
-  constructor() { }
+  infoPortfolio:any;
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.datosPortfolio.obtenerPersona().subscribe(data=>{
+      this.infoPortfolio=data[0];
+    })
   }
 
 }
