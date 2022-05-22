@@ -26,8 +26,8 @@
                     <input type="text" name="img" formControlName="img" class="form-control" >
                 </div>
                 <div class="mb-3">
-                    <label for="carrer" class="col-form-label">Carrer:</label>
-                    <input type="text" name="carrer" formControlName="carrer" class="form-control" >
+                    <label for="career" class="col-form-label">Career:</label>
+                    <input type="text" name="career" formControlName="career" class="form-control" >
                 </div>
                 <div class="mb-3">
                     <label for="start" class="col-form-label">Fecha inicio:</label>
@@ -40,7 +40,7 @@
                 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Save changes</button>
+                  <button type="submit" class="btn btn-primary" (click)="refresh()" data-bs-dismiss="modal">Save changes</button>
                 </div>
               </form>
             </div>
@@ -83,12 +83,12 @@
     
     <div class="d-flex justify-content-between">
         <h2>Educacion</h2>
-        <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm">
+        <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="limpiarForm()">
             <i class="fas fa-plus"></i>
         </button>    
     </div>
     <ul class="p-2">
-        <li *ngFor="let educacion of educacionList">
+        <li *ngFor="let educacion of educacionList; let i = index">
             
             <div class="d-flex justify-content-between">
                 <div class="d-flex">
@@ -102,8 +102,12 @@
                     </div>
                 </div>    
                 <div>
-                    <i class="fas fa-pen align-self-end pb-3 "></i>
-                    <i class="far fa-trash-alt"></i>
+                    <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)">
+                        <i class="fas fa-pen align-self-end pb-3 "></i>
+                    </button>
+                    <button class="btn btn-right" (click)="onDeleteEducation(i)">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
                 </div>
             </div>
         </li>
