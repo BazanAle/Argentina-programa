@@ -9,7 +9,8 @@
         <a href="#" class="p-2"><i class="fab fa-facebook-square"></i></a>
         <a href="#"class="p-2"><i class="fab fa-instagram"></i></a>
         <a href="#"class="p-2"> <i class="fab fa-twitter"></i></a>
-        <button routerLink="/login" type="button" class="btn btn-outline-success p-2 m-1">Login</button>
+        <button *ngIf="!isUserLogged" routerLink="/login" type="button" class="btn btn-outline-success p-2 m-1">Login</button>
+        <button *ngIf="isUserLogged"  routerLink="/logout" type="button" class="btn btn-outline-success p-2 m-1" (click)="logout()">Logout</button>
     </div>
   </div>  
 </div>

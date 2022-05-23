@@ -3,6 +3,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Educacion } from 'src/app/data/educacion';
 import { Experiencia } from 'src/app/data/experiencia';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 
 @Component({
@@ -13,10 +14,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ExperienciaComponent implements OnInit {
 educacionList: Educacion[] = [];
 experienciaList:Experiencia[]=[];
-
+isUserLogged: Boolean = false;
 educationForm : FormGroup;
 experienciaForm:FormGroup;
-  constructor(private datosPortfolio:PortfolioService, private formBuilder:FormBuilder) {
+  constructor(private datosPortfolio:PortfolioService, private formBuilder:FormBuilder, private authService:AuthService) {
     this.educationForm=this.formBuilder.group({
       id:[''],
       school:['', Validators.required],
@@ -44,6 +45,7 @@ experienciaForm:FormGroup;
 
   ngOnInit(): void {
     this.reloadData();
+    this.isUserLogged = this.authService.isUserLogged();
     this.datosPortfolio.obtenerExperiencia().subscribe((data)=>{
       this.experienciaList=data.reverse();
     }); 

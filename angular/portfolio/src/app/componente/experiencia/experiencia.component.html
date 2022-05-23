@@ -110,7 +110,7 @@
     <div class="card">
     <div class="experiencia d-flex justify-content-between">
         <h2>Experiencia</h2>
-        <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm">
+        <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm">
             <i class="fas fa-plus"></i>
         </button>    
     </div>
@@ -132,7 +132,7 @@
                         <p>{{experience.lugar}}</p>
                     </div>
                 </div>    
-                <div>
+                <div *ngIf="isUserLogged">
                     <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onEditExperiencia(i)" >
                         <i class="fas fa-pen align-self-end pb-3 "></i>
                     </button>
@@ -147,9 +147,11 @@
     
     <div class="d-flex justify-content-between">
         <h2>Educacion</h2>
+       <div  *ngIf="isUserLogged"> 
         <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="limpiarForm()">
             <i class="fas fa-plus"></i>
-        </button>    
+        </button>  
+    </div>  
     </div>
     <ul class="p-2">
         <li *ngFor="let educacion of educacionList; let i = index">
@@ -165,7 +167,7 @@
                         </div>
                     </div>
                 </div>    
-                <div>
+                <div *ngIf="isUserLogged">
                     <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)">
                         <i class="fas fa-pen align-self-end pb-3 "></i>
                     </button>

@@ -1,8 +1,10 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { LoginDto } from '../data/loginDto';
+import {config} from '../data/config/config';
+import { Observable, tap } from 'rxjs';
+import { LoginDto } from '../data/LoginDto';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,16 +14,20 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   public login(credentials:LoginDto) : Observable<Boolean> {
-    console.log(this.http.post<Boolean>("http://localhost:8080/login", credentials));
-    return this.http.post<Boolean>("http://localhost:8080/login", credentials);
+    return this.http.post<Boolean>(config.baseUrl+"login", credentials).pipe(
+      tap((response:Boolean)=>{
+        if (response)
+        sessionStorage.setItem("user","abazan");
+      })
+    );
   }
 
   public logout() {
     sessionStorage.removeItem("user");
   }
 
-  public isUserLogged():boolean {
-    return sessionStorage.getItem("user") !== null;
+  public isUserLogged():Boolean {
+    return sessionStorage.getItem("user")!== null;
   }
 }
 
