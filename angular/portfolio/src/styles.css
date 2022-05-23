@@ -22,13 +22,13 @@ body{
     
 }
 .avatar{
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     
 }
 .datos-personales{
     position: relative;
-    bottom: 57px;
+    bottom: 71px;
 }
 
 .card{

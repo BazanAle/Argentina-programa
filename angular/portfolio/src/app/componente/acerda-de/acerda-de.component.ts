@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,8 +8,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./acerda-de.component.css']
 })
 export class AcerdaDeComponent implements OnInit {
+  
   infoPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService ) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerPersona().subscribe(data=>{

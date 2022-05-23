@@ -4,6 +4,7 @@ import { Educacion } from 'src/app/data/educacion';
 import { Experiencia } from 'src/app/data/experiencia';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
@@ -12,8 +13,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ExperienciaComponent implements OnInit {
 educacionList: Educacion[] = [];
 experienciaList:Experiencia[]=[];
-primerExperiencia:any;
+
 educationForm : FormGroup;
+experienciaForm:FormGroup;
   constructor(private datosPortfolio:PortfolioService, private formBuilder:FormBuilder) {
     this.educationForm=this.formBuilder.group({
       id:[''],
@@ -25,24 +27,33 @@ educationForm : FormGroup;
       start:['', Validators.required],
       end:['',Validators.required]
 
+    });
+    this.experienciaForm=this.formBuilder.group({
+      id:[''],
+      nombre_empresa:['',Validators.required],
+      fecha_inicio:['', Validators.required],
+      fecha_fin:['', Validators.required],
+      descripcion:['',Validators.required],
+      puesto:['', Validators.required],
+      lugar:['', Validators.required],
+      modalidad:['',Validators.required],
+      url_logo:['', Validators.required]
+
     })
    }
 
   ngOnInit(): void {
     this.reloadData();
     this.datosPortfolio.obtenerExperiencia().subscribe((data)=>{
-      console.log(data);
-      this.experienciaList=data;
-      this.primerExperiencia=data.reverse()[0];
-    });
-      
-
+      this.experienciaList=data.reverse();
+    }); 
   }
+
+
+  // Funciones de Seccion Educacion
   private reloadData(){
     this.datosPortfolio.obtenerEducacion().subscribe((data)=>{
       this.educacionList=data.reverse();
-      console.log(this.educacionList);
-     
     });
   }
   private cleanForm(){
@@ -71,13 +82,12 @@ educationForm : FormGroup;
   }
   refresh(): void { window.location.reload(); }
 
-  onSubmit(){
+  onSubmitEducacion(){
     let educacion: Educacion = this.educationForm.value;
 
     if(this.educationForm.get('id')?.value ==''){
     this.datosPortfolio.guardarNuevaEducacion(educacion).subscribe(
       (newEducation: Educacion)=>{
-        console.log(newEducation);
         this.educacionList.unshift(newEducation);
       }
     );
@@ -95,7 +105,7 @@ educationForm : FormGroup;
   onEditEducation(index:number){
     console.log(index);
     let educacion:Educacion = this.educacionList[index];
-    console.log(educacion);
+    
     this.loadForm(educacion);
   }
   onDeleteEducation(index:number){
@@ -109,4 +119,70 @@ educationForm : FormGroup;
     }
   }
 
+  //Funciones Seccion Experiencia
+onSubmitExperiencia(){
+  let experiencia:Experiencia = this.experienciaForm.value;
+  if(this.educationForm.get('id')?.value ==''){
+  this.datosPortfolio.guardarNuevaExperiencia(experiencia).subscribe(
+    (nuevaExperiencia:Experiencia)=>{
+      this.experienciaList.unshift(nuevaExperiencia);
+    }
+  )
+}else{
+  this.datosPortfolio.modificarExperiencia(experiencia).subscribe(
+    ()=>{
+      this.reloadDataExperiencia();
+    }
+  )
+}
+}
+
+private cleanExperienciaForm(){
+  this.experienciaForm.setValue({
+    id:'',
+    nombre_empresa:[''],
+    fecha_inicio:[''],
+    fecha_fin:[''],
+    descripcion:[''],
+    puesto:[''],
+    lugar:[''],
+    modalidad:[''],
+    url_logo:['']
+  });
+}
+private loadExperienciaForm(experiencia:Experiencia){
+  this.experienciaForm.setValue({
+    id:experiencia.id,
+    nombre_empresa:experiencia.nombre_empresa,
+    fecha_inicio:experiencia.fecha_inicio,
+    fecha_fin:experiencia.fecha_fin,
+    descripcion:experiencia.descripcion,
+    puesto:experiencia.puesto,
+    lugar:experiencia.lugar,
+    modalidad:experiencia.modalidad,
+    url_logo:experiencia.url_logo
+  })
+}
+private reloadDataExperiencia(){
+  this.datosPortfolio.obtenerExperiencia().subscribe((data)=>{
+      this.experienciaList=data.reverse();
+    });
+}
+ limpiarFormExperiencia(){
+   this.cleanExperienciaForm();
+ }
+ onEditExperiencia(index:number){
+  let experiencia = this.experienciaList[index];
+  this.loadExperienciaForm(experiencia);
+ }
+ onDeleteExperiencia(index:number){
+   let experiencia = this.experienciaList[index];
+   if(confirm("Esta seguro de eliminar esta experiencia??")){
+     this.datosPortfolio.borrarExperiencia(experiencia.id).subscribe(
+       ()=>{
+         this.reloadDataExperiencia();
+       }
+     )
+   }
+ }
 }
