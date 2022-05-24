@@ -1,20 +1,81 @@
+
+<!--Modal de Proyecto-->
+<div class="modal fade" id="proyectoForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Proyecto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="proyectoForm" (ngSubmit)="onSubmitProyecto()" >
+              <input type="hidden" name="id" formControlName="id">
+            <div class="mb-3">
+              <label for="title" class="col-form-label">Titulo:</label>
+              <input type="title" name="title" formControlName="title" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="col-form-label">Descripcion:</label>
+                <input type="descripcion" name="descripcion" formControlName="descripcion" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label for="score" class="col-form-label">Score:</label>
+                <input type="number" name="score" formControlName="score" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="col-form-label">Fecha:</label>
+                <input type="fecha" name="fecha" formControlName="fecha" class="form-control" >
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" (click)="refresh()" data-bs-dismiss="modal">Save changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Termina Modal de Proyecto-->
+
+
+
+
+
+
+
 <div class="card">
     <div class="experiencia d-flex justify-content-between">
         <h2>Proyectos</h2>
-        <i class="fas fa-plus"></i>
-    </div>
-    <div class="d-flex justify-content-between">
-        
-            <div>
-                <h4 class="text-primary">Trabajo Final Porfolio</h4>
-                <p>Desarrollo de un portfolio web aplicando todos los conocimientos obtenidos en el plan Argentina programa, tanto de Front como de Back</p>
+      
+          <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="limpiarFormProyecto()">
+              <i class="fas fa-plus"></i>
+          </button>  
+          </div>
+    <div>
+      <ul class="p-2">
+        <li *ngFor="let proyecto of proyectoList; let i = index">
+            <div class="d-flex justify-content-between">
+                  <div class="info-estudios">
+                    <h5>{{proyecto.title}}</h5>
+                    <p>{{proyecto.descripcion}}</p>
+                       
+                    <p> {{proyecto.fecha}}</p> 
+
+                  </div>
                
+                <div *ngIf="isUserLogged">
+                    <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onEditProyecto(i)">
+                        <i class="fas fa-pen align-self-end pb-3 "></i>
+                    </button>
+                    <button class="btn btn-right" (click)="onDeleteProyecto(i)">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
             </div>
-           
-            <div>
-                <i class="fas fa-pen align-self-end pb-3 "></i>
-                <i class="far fa-trash-alt"></i>
-            </div>
+        </li>
+       
+    </ul>
     </div>
     <!--
     <div class="d-flex justify-content-between">
