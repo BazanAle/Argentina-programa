@@ -11,27 +11,28 @@
         <div class="p-1 d-flex justify-content-between ml-3">
             <div>
                <h2 class="m-0">{{miPortfolio.nombre}}, {{miPortfolio.apellido}}</h2>
-               <h6>{{primeraEducacion.title}} </h6>
-               <h6>{{primeraExperiencia.puesto}} {{primeraExperiencia.nombre_empresa}}</h6>
-                <p>{{miPortfolio.domicilio}}
+               <p class="mb-1">- {{miPortfolio.domicilio}} -</p>
+               <h6>- {{primeraEducacion.title}} </h6>
+               <h6 class="mb-3">- {{primeraExperiencia.puesto}} en {{primeraExperiencia.nombre_empresa}}</h6>
               
                 <div class="d-flex">
-                    <button type="button"class="btn btn-primary">Tengo interes en</button>
+                    <a href="https://www.linkedin.com/in/bazan-alejandro/" target="_blank"><button type="button"class="btn btn-primary">Ver CV en Linkedin</button></a>
                     <button type="button" class="btn btn-light ml-2">Informacion de contacto</button>
 
                 </div>
             </div>    
-            <div class="mt-5 mr-3">
-               
+            <div class="mt-4 pt-1 mr-3 align-items-center">
+                <div class="d-flex">
+                    <img class="logo-encabezado" src="../../../assets/images/{{primeraEducacion.img}}" alt="Logo universidad">
+                    <p class= "mt-2 mb-0" >{{primeraEducacion.school}}</p>
+                </div> 
+
                 <div class="d-flex">
                     <img class="logo-encabezado" src="../../../assets/images/{{primeraExperiencia.url_logo}}" alt="Logo experiencia">
                     
                     <p class= "mt-2 mb-0">{{primeraExperiencia.nombre_empresa}}</p>                       
                 </div>
-                <div class="d-flex">
-                    <img class="logo-encabezado" src="../../../assets/images/{{primeraEducacion.img}}" alt="Logo universidad">
-                    <p class= "mt-2 mb-0" >{{primeraEducacion.school}}</p>
-                </div> 
+                
                
                 
             </div>

@@ -55,24 +55,28 @@
     <div>
       <ul class="p-2">
         <li *ngFor="let proyecto of proyectoList; let i = index">
-            <div class="d-flex justify-content-between">
-                  <div class="info-estudios">
-                    <h5>{{proyecto.title}}</h5>
-                    <p>{{proyecto.descripcion}}</p>
+           <div class="d-flex justify-content-between">
+          <h3 class="m-0 text-primary">{{proyecto.title}}</h3>
+          <div *ngIf="isUserLogged">
+            <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onEditProyecto(i)">
+                <i class="fas fa-pen align-self-end pb-3 "></i>
+            </button>
+            <button class="btn btn-right" (click)="onDeleteProyecto(i)">
+                <i class="far fa-trash-alt"></i>
+            </button>
+          </div>
+        </div>
+          <div class="">
+                  <div>
+                    <p class ="m-0"><strong> Descripcion del proyecto: </strong>{{proyecto.descripcion}}</p>
                        
-                    <p> {{proyecto.fecha}}</p> 
+                    <p><strong>Fecha:</strong> {{proyecto.fecha}}</p> 
 
                   </div>
                
-                <div *ngIf="isUserLogged">
-                    <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onEditProyecto(i)">
-                        <i class="fas fa-pen align-self-end pb-3 "></i>
-                    </button>
-                    <button class="btn btn-right" (click)="onDeleteProyecto(i)">
-                        <i class="far fa-trash-alt"></i>
-                    </button>
-                </div>
+
             </div>
+            <hr style="height: 7px;"class="mt-0">
         </li>
        
     </ul>

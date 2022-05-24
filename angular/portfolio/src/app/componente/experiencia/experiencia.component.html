@@ -119,20 +119,23 @@
             
             <div class="d-flex justify-content-between">
                 <div class="d-flex">
-                    <img class="institucion mt-3 img-logo" src="../../../assets/images/{{experience.url_logo}}" alt="Logo">
+                    <img class="institucion mt-2 img-logo" src="../../../assets/images/{{experience.url_logo}}" alt="Logo">
                     <div class="info-estudios">
-                        <h5>{{experience.nombre_empresa}} </h5>
-                        <div class="d-flex">
-                            <p>{{experience.puesto}} - </p><p> - {{experience.descripcion}}</p>
+                        <h5>Nombre de la empresa: {{experience.nombre_empresa}} </h5>
+                        <div class="">
+                            <div class="d-flex">
+                                <p>Periodo trabajado: {{experience.fecha_inicio}}</p> - <p>{{experience.fecha_fin}}</p>
+                            </div>
+                            <p> Puesto: {{experience.puesto}}</p>
+                            <div class="d-flex ">
+                                <p> Descripcion de tareas:</p><p> {{experience.descripcion}}</p>
+                            </div>
                         </div>
-                        <div class="d-flex">
-                            <p>{{experience.fecha_inicio}}</p> - <p>{{experience.fecha_fin}}</p>
-                        </div>
-                        <p>Tiempo de duracion: {{experience.modalidad}}</p>
-                        <p>{{experience.lugar}}</p>
+                        <p>Modalidad de trabajo: {{experience.modalidad}}</p>
+                        <p class="m-0">Lugar de trabajo: {{experience.lugar}}</p>
                     </div>
                 </div>    
-                <div *ngIf="isUserLogged">
+                <div *ngIf="isUserLogged" class="d-flex align-items-start">
                     <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onEditExperiencia(i)" >
                         <i class="fas fa-pen align-self-end pb-3 "></i>
                     </button>
@@ -141,12 +144,12 @@
                     </button>    
                 </div>
             </div>
-            
+            <hr style="height: 7px;" class="mt-0">
         </li>
     </ul>
     
-    <div class="d-flex justify-content-between">
-        <h2>Educacion</h2>
+    <div class="d-flex justify-content-between mb-2">
+        <h2 >Educacion</h2>
        <div  *ngIf="isUserLogged"> 
         <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="limpiarForm()">
             <i class="fas fa-plus"></i>
@@ -160,10 +163,11 @@
                 <div class="d-flex">
                     <img src="../../../assets/images/{{educacion.img}}" alt="Logo" class="img-logo">
                     <div class="info-estudios">
-                        <h5>{{educacion.school}}</h5>
-                        <p>{{educacion.career}}</p>
+                        <h5>Institucion: {{educacion.school}}</h5>
+                        <p>Titulo Obtenido: {{educacion.title}}</p>
+                        <p>Carrera: {{educacion.career}}</p>
                         <div class="d-flex">
-                            <p> {{educacion.start}}</p> - <p>{{educacion.end}}</p>
+                            <p class="m-0">Duracion: {{educacion.start}}</p> - <p class="m-0">{{educacion.end}}</p>
                         </div>
                     </div>
                 </div>    
@@ -176,6 +180,7 @@
                     </button>
                 </div>
             </div>
+            <hr style="height: 7px;"class="mt-0">
         </li>
        
     </ul>

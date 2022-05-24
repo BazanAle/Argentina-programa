@@ -14,7 +14,7 @@
               <input type="aptitud" name="aptitud" formControlName="aptitud" class="form-control" >
             </div>
             <div class="mb-3">
-                <label for="progress" class="col-form-label">Progress:</label>
+                <label for="progress" class="col-form-label">Progreso (0 - 100):</label>
                 <input type="progress" name="progress" formControlName="progress" class="form-control" >
             </div>
             
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div *ngIf="isUserLogged">
+            <div *ngIf="isUserLogged" class="d-flex">
                 <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#skillForm" (click)="onEditSkill(i)">
                     <i class="fas fa-pen align-self-end pb-3 "></i>
                 </button>

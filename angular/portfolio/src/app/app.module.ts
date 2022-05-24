@@ -17,6 +17,7 @@ import { NavbarComponent } from './componente/navbar/navbar.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { NavbarComponent } from './componente/navbar/navbar.component';
     LoginComponent,
     PortfolioComponent,
     NavbarComponent,
+    
     
   
   ],

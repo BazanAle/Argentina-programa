@@ -32,8 +32,8 @@ export class PortfolioService {
   modificarEducacion(educacion:Educacion):Observable<any>{
     return this.http.put<any>(config.baseUrl+"educacion/update", educacion);
   }
-  borrarEducacion(id: number):Observable<any>{
-    return this.http.delete<any>(config.baseUrl+"educacion/"+ id);
+  borrarEducacion(id:number):Observable<any>{
+    return this.http.delete<any>(config.baseUrl+"educacion/"+id);
   }
 
     //Funciones Experiencia
