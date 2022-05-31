@@ -27,7 +27,7 @@ public class ExperienciaController {
     private IExperienciaService experienciaServ;
     
     @GetMapping("/experiencia")
-    @ResponseBody
+    @ResponseBody 
     public List<Experiencia>obtenerExperiencia(){
         return experienciaServ.obtenerExperiencia();
     }

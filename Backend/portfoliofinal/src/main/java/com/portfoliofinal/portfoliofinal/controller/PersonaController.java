@@ -35,8 +35,8 @@ public class PersonaController {
         return persoServ.obtenerPersona();
     }
     @PostMapping("/persona/create")
-    public void crearPersona(@RequestBody Persona persona){
-        persoServ.crearPersona(persona);
+    public Persona crearPersona(@RequestBody Persona persona){
+       return persoServ.crearPersona(persona);
     }
     
     @DeleteMapping("/persona/{id}")

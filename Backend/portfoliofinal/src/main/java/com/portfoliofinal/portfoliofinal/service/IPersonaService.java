@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface IPersonaService {
     public List<Persona> obtenerPersona();
-    public void crearPersona(Persona persona);
+    public Persona crearPersona(Persona persona);
     public void borrarPersona(Long id);
     public Persona buscarPersona(Long id);
     public void modificarPersona(Persona persona);
