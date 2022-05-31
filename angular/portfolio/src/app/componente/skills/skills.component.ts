@@ -55,11 +55,11 @@ export class SkillsComponent implements OnInit {
   onSubmitSkill(){
     
     let skill: Skill = this.skillForm.value;
-   
+   console.log(skill);
     if(this.skillForm.get('id')?.value ==''){
     this.datosPortfolio.guardarNuevoSkill(skill).subscribe(
       (newSkill: Skill)=>{
-       
+       console.log(newSkill);
         this.skillList.unshift(newSkill);
       }
     );

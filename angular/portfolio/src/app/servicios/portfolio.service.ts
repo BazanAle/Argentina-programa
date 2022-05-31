@@ -23,6 +23,7 @@ export class PortfolioService {
   
     //Funciones Educacion
   obtenerEducacion():Observable<any>{
+    console.log(this.http.get<any>(config.baseUrl+"educacion"));
    return this.http.get<any>(config.baseUrl+"educacion");
   }
 

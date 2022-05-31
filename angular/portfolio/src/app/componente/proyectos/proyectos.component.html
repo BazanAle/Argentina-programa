@@ -12,23 +12,22 @@
               <input type="hidden" name="id" formControlName="id">
             <div class="mb-3">
               <label for="title" class="col-form-label">Titulo:</label>
-              <input type="title" name="title" formControlName="title" class="form-control" >
+              <input type="text" name="title" formControlName="title" class="form-control" >
             </div>
             <div class="mb-3">
                 <label for="descripcion" class="col-form-label">Descripcion:</label>
-                <input type="descripcion" name="descripcion" formControlName="descripcion" class="form-control" >
+                <input type="text" name="descripcion" formControlName="descripcion" class="form-control" >
             </div>
             <div class="mb-3">
-                <label for="score" class="col-form-label">Score:</label>
-                <input type="number" name="score" formControlName="score" class="form-control" >
+                <input type="hidden" name="score" formControlName="score" class="form-control" >
             </div>
             <div class="mb-3">
                 <label for="fecha" class="col-form-label">Fecha:</label>
-                <input type="fecha" name="fecha" formControlName="fecha" class="form-control" >
+                <input type="text" name="fecha" formControlName="fecha" class="form-control" >
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" (click)="refresh()" data-bs-dismiss="modal">Save changes</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
             </div>
           </form>
         </div>
@@ -82,6 +81,4 @@
     </ul>
     </div>
 </div>
-<div id="footer">
-  <P>Ver</P>
-</div>
+

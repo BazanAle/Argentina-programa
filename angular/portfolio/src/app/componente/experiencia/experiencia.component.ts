@@ -54,6 +54,7 @@ experienciaForm:FormGroup;
 
   // Funciones de Seccion Educacion
   private reloadData(){
+    console.log(this.datosPortfolio)
     this.datosPortfolio.obtenerEducacion().subscribe((data)=>{
       this.educacionList=data.reverse();
     });
@@ -91,6 +92,7 @@ experienciaForm:FormGroup;
     this.datosPortfolio.guardarNuevaEducacion(educacion).subscribe(
       (newEducation: Educacion)=>{
         this.educacionList.unshift(newEducation);
+        
       }
     );
   } else {
@@ -122,6 +124,11 @@ experienciaForm:FormGroup;
   }
 
   //Funciones Seccion Experiencia
+  private reloadDataExperiencia(){
+    this.datosPortfolio.obtenerExperiencia().subscribe((data)=>{
+        this.experienciaList=data.reverse();
+      });
+  }
 onSubmitExperiencia(){
   let experiencia:Experiencia = this.experienciaForm.value;
   if(this.educationForm.get('id')?.value ==''){
@@ -165,11 +172,7 @@ private loadExperienciaForm(experiencia:Experiencia){
     url_logo:experiencia.url_logo
   })
 }
-private reloadDataExperiencia(){
-  this.datosPortfolio.obtenerExperiencia().subscribe((data)=>{
-      this.experienciaList=data.reverse();
-    });
-}
+
  limpiarFormExperiencia(){
    this.cleanExperienciaForm();
  }

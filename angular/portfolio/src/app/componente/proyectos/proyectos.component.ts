@@ -44,7 +44,7 @@ export class ProyectosComponent implements OnInit {
       id:'',
       title:[''],
       descripcion:[''],
-      score:[''],
+      score: 1,
       fecha:['']
     })
   }

@@ -11,18 +11,18 @@
               <input type="hidden" name="id" formControlName="id">
             <div class="mb-3">
               <label for="aptitud" class="col-form-label">Aptitud:</label>
-              <input type="aptitud" name="aptitud" formControlName="aptitud" class="form-control" >
+              <input type="text" name="aptitud" formControlName="aptitud" class="form-control" >
             </div>
             <div class="mb-3">
                 <label for="progress" class="col-form-label">Progreso (0 - 100):</label>
-                <input type="progress" name="progress" formControlName="progress" class="form-control" >
+                <input type="number" name="progress" formControlName="progress" class="form-control" >
             </div>
             
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" (click)="refresh()" data-bs-dismiss="modal">Save changes</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
             </div>
-          </form>
+          </form> 
         </div>
       </div>
     </div>

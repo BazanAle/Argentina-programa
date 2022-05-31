@@ -10,23 +10,23 @@
               <form [formGroup]="educationForm" (ngSubmit)="onSubmitEducacion()" >
                   <input type="hidden" name="id" formControlName="id">
                 <div class="mb-3">
-                  <label for="school" class="col-form-label">School:</label>
+                  <label for="school" class="col-form-label">Institucion</label>
                   <input type="text" name="school" formControlName="school" class="form-control" >
                 </div>
                 <div class="mb-3">
-                    <label for="title" class="col-form-label">Title:</label>
+                    <label for="title" class="col-form-label">Titulo:</label>
                     <input type="text" name="title" formControlName="title" class="form-control" >
                 </div>
                 <div class="mb-3">
-                    <label for="score" class="col-form-label">Score:</label>
+                    <label for="score" class="col-form-label">Promedio:</label>
                     <input type="number" name="score" formControlName="score" class="form-control" >
                 </div>
                 <div class="mb-3">
-                    <label for="img" class="col-form-label">Imagen:</label>
+                    <label for="img" class="col-form-label">Imagen(subir archivo en carpeta images y poner nombre de archivo):</label>
                     <input type="text" name="img" formControlName="img" class="form-control" >
                 </div>
                 <div class="mb-3">
-                    <label for="career" class="col-form-label">Career:</label>
+                    <label for="career" class="col-form-label">Carrera:</label>
                     <input type="text" name="career" formControlName="career" class="form-control" >
                 </div>
                 <div class="mb-3">
@@ -40,7 +40,7 @@
                 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" (click)="refresh()" data-bs-dismiss="modal">Save changes</button>
+                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
                 </div>
               </form>
             </div>
@@ -91,13 +91,13 @@
                     <input type="text" name="modalidad" formControlName="modalidad" class="form-control" >
                 </div>
                 <div class="mb-3">
-                    <label for="url_logo" class="col-form-label">Url de logo:</label>
+                    <label for="url_logo" class="col-form-label">Url de logo:(colocar nombre de archivo) y luego subir archivo a la carpeta images</label>
                     <input type="text" name="url_logo" formControlName="url_logo" class="form-control" >
                 </div>
                 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="refresh()">Save changes</button>
+                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
                 </div>
               </form>
             </div>
@@ -110,7 +110,7 @@
     <div class="card">
     <div class="experiencia d-flex justify-content-between">
         <h2>Experiencia</h2>
-        <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm">
+        <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="limpiarFormExperiencia()">
             <i class="fas fa-plus"></i>
         </button>    
     </div>
