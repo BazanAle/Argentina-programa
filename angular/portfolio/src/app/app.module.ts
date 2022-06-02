@@ -14,6 +14,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './componente/auth/login/login.component';
 import { PortfolioComponent } from './componente/portfolio/portfolio.component';
 import { NavbarComponent } from './componente/navbar/navbar.component';
+import { EducacionComponent } from './componente/educacion/educacion.component';
 
 
 
@@ -29,6 +30,7 @@ import { NavbarComponent } from './componente/navbar/navbar.component';
     LoginComponent,
     PortfolioComponent,
     NavbarComponent,
+    EducacionComponent,
     
     
   

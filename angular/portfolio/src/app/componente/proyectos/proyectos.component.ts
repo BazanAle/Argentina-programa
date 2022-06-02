@@ -19,7 +19,7 @@ export class ProyectosComponent implements OnInit {
       id:[''],
       title:['',Validators.required],
       descripcion:['', Validators.required],
-      score:['', Validators.required],
+      score:[5, Validators.required],
       fecha:['',Validators.required]
 
     })
@@ -44,7 +44,7 @@ export class ProyectosComponent implements OnInit {
       id:'',
       title:[''],
       descripcion:[''],
-      score: 1,
+      score:5,
       fecha:['']
     })
   }

@@ -1,54 +1,4 @@
-<!--Modal de Educacion-->
-    <div class="modal fade" id="educationForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Educacion</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form [formGroup]="educationForm" (ngSubmit)="onSubmitEducacion()" >
-                  <input type="hidden" name="id" formControlName="id">
-                <div class="mb-3">
-                  <label for="school" class="col-form-label">Institucion</label>
-                  <input type="text" name="school" formControlName="school" class="form-control" >
-                </div>
-                <div class="mb-3">
-                    <label for="title" class="col-form-label">Titulo:</label>
-                    <input type="text" name="title" formControlName="title" class="form-control" >
-                </div>
-                <div class="mb-3">
-                    <label for="score" class="col-form-label">Promedio:</label>
-                    <input type="number" name="score" formControlName="score" class="form-control" >
-                </div>
-                <div class="mb-3">
-                    <label for="img" class="col-form-label">Imagen(subir archivo en carpeta images y poner nombre de archivo):</label>
-                    <input type="text" name="img" formControlName="img" class="form-control" >
-                </div>
-                <div class="mb-3">
-                    <label for="career" class="col-form-label">Carrera:</label>
-                    <input type="text" name="career" formControlName="career" class="form-control" >
-                </div>
-                <div class="mb-3">
-                    <label for="start" class="col-form-label">Fecha inicio:</label>
-                    <input type="text" name="start" formControlName="start" class="form-control" >
-                </div>
-                <div class="mb-3">
-                    <label for="end" class="col-form-label">Fecha fin:</label>
-                    <input type="text" name="end" formControlName="end" class="form-control" >
-                </div>
-                
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!--Termina Modal de Educacion-->
 
       <!--Modal de Experiencia-->
     <div class="modal fade" id="experienciaForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -107,7 +57,7 @@
 
       <!--Termina Modal de Experiencia-->
 
-    <div class="card">
+      
     <div class="experiencia d-flex justify-content-between">
         <h2>Experiencia</h2>
         <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="limpiarFormExperiencia()">
@@ -148,40 +98,4 @@
         </li>
     </ul>
     
-    <div class="d-flex justify-content-between mb-2">
-        <h2 >Educacion</h2>
-       <div  *ngIf="isUserLogged"> 
-        <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="limpiarForm()">
-            <i class="fas fa-plus"></i>
-        </button>  
-    </div>  
-    </div>
-    <ul class="p-2">
-        <li *ngFor="let educacion of educacionList; let i = index">
-            
-            <div class="d-flex justify-content-between">
-                <div class="d-flex">
-                    <img src="../../../assets/images/{{educacion.img}}" alt="Logo" class="img-logo">
-                    <div class="info-estudios">
-                        <h5>Institucion: {{educacion.school}}</h5>
-                        <p>Titulo Obtenido: {{educacion.title}}</p>
-                        <p>Carrera: {{educacion.career}}</p>
-                        <div class="d-flex">
-                            <p class="m-0">Duracion: {{educacion.start}}</p> - <p class="m-0">{{educacion.end}}</p>
-                        </div>
-                    </div>
-                </div>    
-                <div *ngIf="isUserLogged">
-                    <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)">
-                        <i class="fas fa-pen align-self-end pb-3 "></i>
-                    </button>
-                    <button class="btn btn-right" (click)="onDeleteEducation(i)">
-                        <i class="far fa-trash-alt"></i>
-                    </button>
-                </div>
-            </div>
-            <hr style="height: 7px;"class="mt-0">
-        </li>
-       
-    </ul>
-</div>
+    

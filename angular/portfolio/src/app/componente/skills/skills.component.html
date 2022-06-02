@@ -45,9 +45,9 @@
             <li *ngFor="let skill of skillList; let i = index">
         <div class="d-flex">
             <div class="skills">
-                <p class="text-center m-0">{{skill.aptitud}}</p>
+                <p class="text-center m-1 mt-3">{{skill.aptitud}}</p>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width:{{skill.progress}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-primary opacity-50" role="progressbar" style="width:{{skill.progress}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                     </div>
                 </div>
             </div>

@@ -64,7 +64,7 @@ export class SkillsComponent implements OnInit {
       }
     );
   } else {
-    this.datosPortfolio.modificarSkill(skill).subscribe(
+   this.datosPortfolio.modificarSkill(skill).subscribe(
       ()=>{
         this.reloadData();
       }
