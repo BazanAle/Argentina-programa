@@ -34,9 +34,9 @@
 
 <div class="card">
     <div class="d-flex justify-content-between">
-        <h2>Hard Skills Y Soft Skills</h2>
+        <h2 class="text-danger">Hard Skills Y Soft Skills</h2>
         <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#skillForm" (click)="limpiarFormSkill()">
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-plus text-danger"></i>
         </button>  
         
     </div>
@@ -51,9 +51,9 @@
                     </div>
                 </div>
             </div>
-            <div *ngIf="isUserLogged" class="d-flex">
+            <div *ngIf="isUserLogged"  class="d-flex align-items-end">
                 <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#skillForm" (click)="onEditSkill(i)">
-                    <i class="fas fa-pen align-self-end pb-3 "></i>
+                    <i class="fas fa-pen align-self-end "></i>
                 </button>
                 <button class="btn btn-right" (click)="onDeleteSkill(i)">
                     <i class="far fa-trash-alt"></i>

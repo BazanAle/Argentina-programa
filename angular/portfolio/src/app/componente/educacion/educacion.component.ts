@@ -70,7 +70,6 @@ export class EducacionComponent implements OnInit {
   
     onSubmitEducacion(){
       let educacion: Educacion = this.educationForm.value;
-  
       if(this.educationForm.get('id')?.value ==''){
       this.datosPortfolio.guardarNuevaEducacion(educacion).subscribe(
         (newEducation: Educacion)=>{

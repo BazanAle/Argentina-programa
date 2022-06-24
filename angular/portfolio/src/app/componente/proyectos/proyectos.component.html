@@ -46,37 +46,36 @@
 
 <div class="card">
     <div class="experiencia d-flex justify-content-between">
-        <h2>Proyectos</h2>
+        <h2 class="text-danger">Proyectos</h2>
       
           <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="limpiarFormProyecto()">
-              <i class="fas fa-plus"></i>
+              <i class="fas fa-plus text-danger"></i>
           </button>  
           </div>
     <div>
       <ul class="p-2">
         <li *ngFor="let proyecto of proyectoList; let i = index">
-           <div class="d-flex justify-content-between">
-          <h3 class="m-0 text-primary">{{proyecto.title}}</h3>
-          <div *ngIf="isUserLogged">
-            <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onEditProyecto(i)">
-                <i class="fas fa-pen align-self-end pb-3 "></i>
-            </button>
-            <button class="btn btn-right" (click)="onDeleteProyecto(i)">
-                <i class="far fa-trash-alt"></i>
-            </button>
-          </div>
-        </div>
-          <div class="">
-                  <div>
-                    <p class ="m-0"><strong> Descripcion del proyecto: </strong>{{proyecto.descripcion}}</p>
-                       
-                    <p><strong>Fecha:</strong> {{proyecto.fecha}}</p> 
-
-                  </div>
-               
-
+          <div class="d-flex">
+            <div class="">
+              <h3 class="m-0">{{proyecto.title}}</h3>
+              
+              
+              <div>
+                <p class ="m-0"><strong class="text-primary"> Descripcion del proyecto: </strong>{{proyecto.descripcion}}</p>       
+                <p><strong class="text-primary">Fecha:</strong> {{proyecto.fecha}}</p> 
+              </div>
             </div>
-            <hr style="height: 7px;"class="mt-0">
+            <div *ngIf="isUserLogged" class="d-flex align-items-start">
+              <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onEditProyecto(i)">
+                <i class="fas fa-pen align-self-end pb-3 "></i>
+              </button>
+              <button class="btn btn-right" (click)="onDeleteProyecto(i)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </div>
+            
+          </div>
+          <hr style="height: 7px;"class="mt-0">
         </li>
        
     </ul>

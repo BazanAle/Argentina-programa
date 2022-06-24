@@ -48,12 +48,12 @@
     </div>
   </div>
 
-
+<!--Termina modal Educacion-->
   <div class="d-flex justify-content-between mb-2">
-    <h2 >Educacion</h2>
+    <h2 class="text-danger" >Educacion</h2>
    <div  *ngIf="isUserLogged"> 
     <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="limpiarForm()">
-        <i class="fas fa-plus"></i>
+        <i class="fas fa-plus text-danger"></i>
     </button>  
 </div>  
 </div>
@@ -66,13 +66,13 @@
                 <div class="info-estudios">
                     <h5>Institucion: {{educacion.school}}</h5>
                     <p>Titulo Obtenido: {{educacion.title}}</p>
-                    <p>Carrera: {{educacion.career}}</p>
+                    <p>Carrera: {{educacion.career}}</p>    
                     <div class="d-flex">
                         <p class="m-0">Duracion: {{educacion.start}}</p> - <p class="m-0">{{educacion.end}}</p>
                     </div>
                 </div>
             </div>    
-            <div *ngIf="isUserLogged">
+            <div *ngIf="isUserLogged" class="d-flex align-items-start">
                 <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)">
                     <i class="fas fa-pen align-self-end pb-3 "></i>
                 </button>

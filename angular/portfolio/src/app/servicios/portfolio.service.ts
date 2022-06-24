@@ -17,10 +17,8 @@ export class PortfolioService {
   constructor(private http:HttpClient) { }
 
   
-  obtenerPersona():Observable<any>{
-    return this.http.get<any>(config.baseUrl+"persona");
-  }
-  
+
+
     //Funciones Educacion
   obtenerEducacion():Observable<any>{
     console.log(this.http.get<any>(config.baseUrl+"educacion"));
@@ -53,6 +51,9 @@ export class PortfolioService {
     }
  
     //Funciones Persona
+    obtenerPersona():Observable<any>{
+      return this.http.get<any>(config.baseUrl+"persona");
+    }
     modificarPersona(persona:Persona):Observable<any>{
       return this.http.put<any>(config.baseUrl+"persona/update", persona);
     }

@@ -59,9 +59,9 @@
 
       
     <div class="experiencia d-flex justify-content-between">
-        <h2>Experiencia</h2>
+        <h2 class="text-danger">Experiencia</h2>
         <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="limpiarFormExperiencia()">
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-plus text-danger"></i>
         </button>    
     </div>
     <ul class="p-2">
@@ -74,7 +74,7 @@
                         <h5>Nombre de la empresa: {{experience.nombre_empresa}} </h5>
                         <div class="">
                             <div class="d-flex">
-                                <p>Periodo trabajado: {{experience.fecha_inicio}}</p> - <p>{{experience.fecha_fin}}</p>
+                                <p class="text-secondary">Periodo trabajado: {{experience.fecha_inicio}}</p> - <p>{{experience.fecha_fin}}</p>
                             </div>
                             <p> Puesto: {{experience.puesto}}</p>
                             <div class="d-flex ">
