@@ -1,0 +1,75 @@
+<!--Modal Info contacto-->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title text-danger" id="staticBackdropLabel" >Info de contacto</h2>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h3>Miguel Alejandro Bazan</h3>
+            <h4>Cordoba Capital, Argentina</h4>
+            <h4>Telefono: 3513919069</h4>
+            <h4>email: elalebazan@gmail.com</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Fin Modal Info contacto-->
+
+
+
+
+<div class="header border border-dark" style="height:780px;">
+    <img class="img-fondo" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="Imagen fondo">
+    <div class="datos-personales">
+        <div class="d-flex p-2">
+            <img class="rounded-circle avatar img-avatar ml-2 " src="../../../assets/images/{{miPortfolio.url_foto}}" alt="" >
+           
+
+        </div>
+       
+   
+        <div class="p-1 d-flex justify-content-between ml-3">
+            <div>
+               <h2 class="m-0">{{miPortfolio.nombre}}, {{miPortfolio.apellido}}</h2>
+               <p class="mb-1">- {{miPortfolio.domicilio}} -</p>
+               <h6>- {{primeraEducacion.title}} </h6>
+               <h6 class="mb-3">- {{primeraExperiencia.puesto}} en {{primeraExperiencia.nombre_empresa}}</h6>
+              
+                <div class="d-flex">
+                    <a href="https://www.linkedin.com/in/bazan-alejandro/" target="_blank"><button type="button"class="btn btn-primary">Ver CV en Linkedin</button></a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"class="btn btn-danger ml-2 border border-danger">Informacion de contacto</button>
+
+                </div>
+            </div>    
+            <div class="mt-4 pt-1 mr-3 align-items-center">
+                <div class="d-flex">
+                    <img class="logo-encabezado" src="../../../assets/images/{{primeraEducacion.img}}" alt="Logo universidad">
+                    <p class= "mt-2 mb-0" >{{primeraEducacion.school}}</p>
+                </div> 
+
+                <div class="d-flex">
+                    <img class="logo-encabezado" src="../../../assets/images/{{primeraExperiencia.url_logo}}" alt="Logo experiencia">
+                    
+                    <p class= "mt-2 mb-0">{{primeraExperiencia.nombre_empresa}}</p>                       
+                </div>
+                
+               
+                
+            </div>
+        </div>
+        
+    </div>
+</div>    
+
+

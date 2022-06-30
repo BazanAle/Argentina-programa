@@ -1,0 +1,8 @@
+.img-avatar{
+    object-fit: cover;
+}
+.logo-encabezado{
+    object-fit: scale-down;
+    height:50px;
+    width:60px;
+}

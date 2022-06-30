@@ -1,0 +1,90 @@
+{
+    "name":"Alejandro Bazan",
+    "backimage":"https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+    "image":"../assets/images/perfil.jpg",
+    "position":"Contador y Programador FullStack",
+    "navbar":"../assets/images/argentina_programa.jpg",
+    "company":{
+        "name":"MAYO HELADOS",
+        "img":"url",
+        "url":"../assets/images/mayo_helados.jpg"
+    },
+    "school":{
+        "name":"Universidad Nacional de Cordoba",
+        "img":"logo",
+        "url":"../assets/images/logo_unc.jpg"
+    },
+    "ubication":"Cordoba(Argentina)",
+    "about":"Contador Publico",
+    "experience":[
+        {
+        "position":"Dueño",
+        "company":"Mayo Helados Centro",
+        "img":"../assets/images/mayo_helados.png",
+        "mode":"Jornada Completa",
+        "start":"mar 2018",
+        "end":"sep 2022",
+        "tiempo_duracion":"4 años",
+        "lugar":"Cordoba, Argentina"
+        },
+        {
+        "position":"Comprador",
+        "company":"Coca Cola Andina",
+        "img":"../assets/images/coca_cola.jpeg",
+        "mode":"Jornada Completa",
+        "start":"mar 2012",
+        "end":"sep 2018",
+        "tiempo_duracion":"5 años",
+        "lugar":"Cordoba, Argentina"
+
+        }
+],
+    "education":[
+    {
+        "school": "Argentina Programa",
+        "title":"Programador FullStack",
+        "img":"../assets/images/argentina_programa.jpg",
+        "career":"Programador FullStack", 
+        "start":"2021",
+        "end": "En curso"
+    },
+    {
+        "school": "UNC",
+        "title":"Contador Publico",
+        "img":"../assets/images/logo_unc.jpg",
+        "career":"Contador Publico",
+        "start":"2012",
+        "end": "2019"
+    },
+    {
+        "school": "Jovenes Argentinos",
+        "title":"Perito mercantil",
+        "img":"../assets/images/jovenes_argentinos.jpeg",
+        "career":"Perito mercantil",
+        "start":"2006",
+        "end": "2012"
+
+    }
+ 
+
+],
+"aptitudes":[{
+    "name":"Resolucion de problemas",
+    "progress":75,
+    "confirms":2,
+    "confirmsNames":[{
+        "name":"Moncho"
+        }]
+    
+    },
+    {
+    "name":"Trabajo en Equipo",
+    "progress":75,
+    "confirms":2,
+    "confirmsNames":[{
+        "name":"Moncho"
+        }]
+    }
+    ]
+
+}

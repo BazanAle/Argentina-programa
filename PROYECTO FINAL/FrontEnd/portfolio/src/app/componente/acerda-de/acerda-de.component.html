@@ -1,0 +1,49 @@
+
+<!--Comienza Modal-->
+<div class="modal fade" id="personaForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sobre Mi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="personaForm" (ngSubmit)="onSubmitPersona()" >
+              <input type="hidden" name="id" formControlName="id">
+            <div class="mb-3">
+              <label for="sobre_mi" class="col-form-label">Sobre mi:</label>
+              <input type="text" minlength="4" maxlength="255" name="sobre_mi" formControlName="sobre_mi" class="form-control" >
+              <p class="text-black-50 m-0 pl-1" style="font-size:small">Max: 255 caracteres</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+            </div>
+          </form> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <!--Termina Modal-->
+ 
+ 
+
+<div class="card d-flex flex-row">
+ 
+    <div>
+        <h2 class="text-danger">Sobre mi</h2>
+        
+        <div *ngFor="let persona of personaList">
+            <p id="text-acercade"> {{persona.sobre_mi}}</p>
+        </div>
+    </div>
+    
+    <div  *ngIf="isUserLogged"> 
+        <button class="btn btn-right"  data-bs-toggle="modal" data-bs-target="#personaForm" (click)="onEditPersona()">
+            <i class="fas fa-pen align-self-end pb-3 text-danger "></i>
+        </button>
+    </div>  
+    
+</div>

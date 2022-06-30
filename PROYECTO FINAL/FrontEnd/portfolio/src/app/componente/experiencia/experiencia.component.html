@@ -1,0 +1,102 @@
+
+
+      <!--Modal de Experiencia-->
+    <div class="modal fade" id="experienciaForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Experiencia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="experienciaForm" (ngSubmit)="onSubmitExperiencia()" >
+                  <input type="hidden" name="id" formControlName="id">
+                <div class="mb-3">
+                  <label for="nombre_empresa" class="col-form-label">Nombre de la empresa:</label>
+                  <input type="text" name="nombre_empresa" formControlName="nombre_empresa" class="form-control" >
+                </div>
+                
+                <div class="mb-3">
+                    <label for="fecha_inicio" class="col-form-label">Fecha de inicio:</label>
+                    <input type="text" name="fecha_inicio" formControlName="fecha_inicio" class="form-control" >
+                </div>
+                <div class="mb-3">
+                    <label for="fecha_fin" class="col-form-label">Fecha Fin:</label>
+                    <input type="text" name="fecha_fin" formControlName="fecha_fin" class="form-control" >
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="col-form-label">Descripcion del puesto:</label>
+                    <input minlength="4" maxlength="255" type="text" name="descripcion" formControlName="descripcion" class="form-control" >
+                    <p class="text-black-50 m-0 pl-1" style="font-size:small">Max: 255 caracteres</p>
+                </div>
+                <div class="mb-3">
+                    <label for="puesto" class="col-form-label">Puesto:</label>
+                    <input type="text" name="puesto" formControlName="puesto" class="form-control" >
+                </div>
+                <div class="mb-3">
+                    <label for="lugar" class="col-form-label">Lugar:</label>
+                    <input type="text" name="lugar" formControlName="lugar" class="form-control" >
+                </div>
+                <div class="mb-3">
+                    <label for="modalidad" class="col-form-label">Modalidad:</label>
+                    <input type="text" name="modalidad" formControlName="modalidad" class="form-control" >
+                </div>
+                <div class="mb-3">
+                    <label for="url_logo" class="col-form-label">Url de logo:(colocar nombre de archivo) y luego subir archivo a la carpeta images</label>
+                    <input type="text" name="url_logo" formControlName="url_logo" class="form-control" >
+                </div>
+                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Termina Modal de Experiencia-->
+
+      
+    <div class="experiencia d-flex justify-content-between">
+        <h2 class="text-danger">Experiencia</h2>
+        <button *ngIf="isUserLogged" type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="limpiarFormExperiencia()">
+            <i class="fas fa-plus text-danger"></i>
+        </button>    
+    </div>
+    <ul class="p-2">
+        <li *ngFor= "let experience of experienciaList; let i=index">
+            
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img class="institucion mt-2 img-logo" src="../../../assets/images/{{experience.url_logo}}" alt="Logo">
+                    <div class="info-estudios">
+                        <h5>Nombre de la empresa: {{experience.nombre_empresa}} </h5>
+                        <div class="">
+                            <div class="d-flex">
+                                <p class="text-secondary">Periodo trabajado: {{experience.fecha_inicio}}</p> - <p>{{experience.fecha_fin}}</p>
+                            </div>
+                            <p> Puesto: {{experience.puesto}}</p>
+                            <div class="d-flex ">
+                                <p> Descripcion de tareas:</p><p> {{experience.descripcion}}</p>
+                            </div>
+                        </div>
+                        <p>Modalidad de trabajo: {{experience.modalidad}}</p>
+                        <p class="m-0">Lugar de trabajo: {{experience.lugar}}</p>
+                    </div>
+                </div>    
+                <div *ngIf="isUserLogged" class="d-flex align-items-start">
+                    <button type="button" class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onEditExperiencia(i)" >
+                        <i class="fas fa-pen align-self-end pb-3 "></i>
+                    </button>
+                    <button type="button" class="btn btn-right" (click)="onDeleteExperiencia(i)">
+                        <i class="far fa-trash-alt"></i>
+                    </button>    
+                </div>
+            </div>
+            <hr style="height: 7px;" class="mt-0">
+        </li>
+    </ul>
+    
+    
