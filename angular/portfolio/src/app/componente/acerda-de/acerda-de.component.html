@@ -12,7 +12,8 @@
               <input type="hidden" name="id" formControlName="id">
             <div class="mb-3">
               <label for="sobre_mi" class="col-form-label">Sobre mi:</label>
-              <input type="text" name="sobre_mi" formControlName="sobre_mi" class="form-control" >
+              <input type="text" minlength="4" maxlength="255" name="sobre_mi" formControlName="sobre_mi" class="form-control" >
+              <p class="text-black-50 m-0 pl-1" style="font-size:small">Max: 255 caracteres</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

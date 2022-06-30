@@ -16,8 +16,9 @@
             </div>
             <div class="mb-3">
                 <label for="descripcion" class="col-form-label">Descripcion:</label>
-                <input type="text" name="descripcion" formControlName="descripcion" class="form-control" >
-            </div>
+                <input type="text" minlength="4" maxlength="255" name="descripcion" formControlName="descripcion" class="form-control" >
+                <p class="text-black-50 m-0 pl-1" style="font-size:small">Max: 255 caracteres</p>
+              </div>
             <div class="mb-3">
                
                 <input type="hidden" name="score" formControlName="score" class="form-control" >
