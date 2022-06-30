@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfoliofinal.portfoliofinal.service;
 
 import com.portfoliofinal.portfoliofinal.model.Skill;
@@ -19,14 +15,14 @@ public class SkillService implements ISkillService{
     @Autowired
     public SkillRepository skillRepo;
     @Override
-    
+
     public List<Skill> obtenerSkill() {
       return skillRepo.findAll();
     }
 
     @Override
-    public void crearSkill(Skill skill) {
-        skillRepo.save(skill);
+    public Skill crearSkill(Skill skill) {
+       return skillRepo.save(skill);
     }
 
     @Override
@@ -43,6 +39,6 @@ public class SkillService implements ISkillService{
     public void modificarSkill(Skill skill) {
        skillRepo.save(skill);
     }
-    
-    
+
+
 }

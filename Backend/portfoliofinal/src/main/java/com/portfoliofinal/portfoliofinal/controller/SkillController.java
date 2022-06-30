@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfoliofinal.portfoliofinal.controller;
 
 import com.portfoliofinal.portfoliofinal.model.Skill;
@@ -25,17 +21,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class SkillController {
     @Autowired
     private ISkillService skillServ;
-    
+
     @GetMapping("/skill")
     @ResponseBody
     public List<Skill> obtenerSkill(){
         return skillServ.obtenerSkill();
     }
     @PostMapping("/skill/create")
-    public void crearSkill(@RequestBody Skill skill){
-        skillServ.crearSkill(skill);
+    public Skill crearSkill(@RequestBody Skill skill){
+        return skillServ.crearSkill(skill);
     }
-    
+
     @DeleteMapping("/skill/{id}")
     public void borrarSkill(@PathVariable Long id){
         skillServ.borrarSkill(id);
@@ -45,7 +41,7 @@ public class SkillController {
     public Skill buscarSkill(@PathVariable Long id){
         return skillServ.buscarSkill(id);
     }
-            
+
     @PutMapping("/skill/update")
     public void modificarSkill(@RequestBody Skill skill){
         skillServ.modificarSkill(skill);
